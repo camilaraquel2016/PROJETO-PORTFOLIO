@@ -1,0 +1,133 @@
+/*=====VARIÁVEIS====*/
+:root {
+    --hue: 255;
+    --body-color: hsl(var(--hue), 12%, 4%);
+    --text-color: hsl(var(--hue), 4%, 70%);
+    --text-color-light: hsl(var(--hue), 4%, 45%);
+    --first-color: hsl(var(--hue), 80%, 65%);
+    --first-color-light: hsla(var(--hue), 70%, 65%, .12);
+    --white-color: hsl(var(--hue), 24%, 98%);
+    --h3-font-size: 1rem;
+    --h2-font-size: 1.25rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    overflow-x: clip;
+}
+
+h1,
+h3 {
+    color: var(--white-color);
+    font-weight: 600;
+    font-family: "Syne", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+.main {
+    overflow: clip
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.section {
+    padding-block: 5rem 2rem;
+}
+
+/* =====HOME==== */
+
+.home {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.home-grid {
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+.home-texto {
+    text-align: center;
+}
+
+
+.home-saudacao {
+    font-family: inherit;
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.home-nome,
+.home-bio span,
+#home-profissao {
+    color: var(--first-color);
+    font-weight: 600;
+}
+
+.home-cargo {
+    font-family: inherit;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 2rem;
+    transition: color .3s;
+}
+
+#home-profissao {
+    white-space: nowrap;
+    display: inline-block;
+    transition: color .3s;
+}
+
+.home-bio {
+    max-width: 480px;
+    margin-inline: auto;
+    line-height: 1.8;
+    color: #c5c5c5;
+}
+
+.home-imagem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img {
+    width: 230px;
+    position: relative;
+    z-index: 3;
+    filter: drop-shadow(0 15px 45px hsla(var(--hue), 80%, 65%, .18));
+}
