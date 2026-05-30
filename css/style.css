@@ -163,6 +163,109 @@ img {
     filter: drop-shadow(0 15px 45px hsla(var(--hue), 80%, 65%, .18));
 }
 
+/* ==== PROJETOS ==== */
+
+.work.section {
+    overflow: hidden;
+}
+
+.work-container {
+    padding-block: 2rem 4rem;
+    padding-inline: 1.5rem;
+    padding-right: 3rem;
+    margin-top: 1.5rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--first-color) var(--container-color);
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.work-container::-webkit-scrollbar {
+    height: 6px
+}
+
+
+.work-container::-webkit-scrollbar-track {
+    background: var(--body-color);
+    border-radius: 10px
+}
+
+
+.work-container::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    border-radius: 10px
+}
+
+.work-container::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--hue), 80%, 55%)
+}
+
+
+.work-card {
+    flex: 0 0 75%;
+    min-width: 340px;
+    max-width: 380px;
+    padding: 1.25rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: transform .4s, border-color .4s;
+}
+
+
+.work-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    height: 160px;
+}
+
+
+.work-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-cabecalho {
+    display: flex;
+    align-items: center;
+    column-gap: .75rem;
+    margin-bottom: .75rem;
+}
+
+.work-numero {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--first-color);
+    opacity: .5;
+    line-height: 1;
+}
+
+
+.work-titulo {
+    font-size: var(--h2-font-size);
+    line-height: 1.2;
+}
+
+
+.work-descricao {
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+
+
 
 /* =====FOOTER===== */
 
