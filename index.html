@@ -137,7 +137,6 @@
           </div>
         </div>
       </section>
-    </main>
 
     <!-- SERVIÇOS -->
     <section class="services section" id="services">
@@ -403,6 +402,74 @@
         </div>
       </div>
     </section>
+
+    <!-- CONTATO -->
+    <section class="contact section" id="contact">
+      <h2 class="section-title">Fale <span>Comigo</span></h2>
+      <p class="subtitulo contact-subtitulo">
+        Tem um projeto em mente? Me manda uma mensagem!
+      </p>
+      <div class="contact-container container">
+        <form class="contact-form contact-card" id="contact-form">
+          <div class="contact-campos">
+            <div class="contact-box">
+              <input
+                type="text"
+                name="nome"
+                class="contact-input"
+                id="nome"
+                required
+                placeholder=" "
+              />
+              <label for="nome" class="contact-label">Nome</label>
+            </div>
+            <div class="contact-box">
+              <input
+                type="email"
+                name="email"
+                class="contact-input"
+                id="email"
+                required
+                placeholder=" "
+              />
+              <label for="email" class="contact-label">E-mail</label>
+            </div>
+          </div>
+          <div class="contact-box contact-box-select">
+            <select
+              name="tipo-projeto"
+              id="tipo-projeto"
+              class="contact-input contact-select"
+              required
+            >
+              <option value="" disabled selected hidden></option>
+              <option value="Site institucional">Site institucional</option>
+              <option value="Aplicação web">Aplicação web</option>
+              <option value="Design UI/UX">Design UI/UX</option>
+              <option value="Consultoria">Consultoria</option>
+              <option value="Outro">Outro</option>
+            </select>
+            <label for="tipo-projeto" class="contact-label"
+              >Tipo de projeto</label
+            >
+          </div>
+          <div class="contact-box contact-area">
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              class="contact-input"
+              required
+              placeholder=" "
+            ></textarea>
+            <label for="mensagem" class="contact-label">Mensagem</label>
+          </div>
+          <button type="submit" class="button contact-button contact-submit">
+            <i class="ri-send-plane-line"></i> Enviar mensagem
+          </button>
+        </form>
+      </div>
+    </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">

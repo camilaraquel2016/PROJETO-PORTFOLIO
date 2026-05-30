@@ -483,6 +483,117 @@ img {
     transition: border-color .4s, color .4s;
 }
 
+/*=============== CONTATO ===============*/
+.contact-subtitulo {
+    text-align: center;
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    margin-top: .75rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-container {
+    row-gap: 3rem
+}
+
+.contact-form {
+    position: relative;
+    max-width: 600px;         
+    width: 100%;         
+    margin-inline: auto;     
+}
+
+.contact-campos {
+    display: grid;
+    margin-bottom: 1.5rem;
+    row-gap: 1.5rem;
+}
+
+.contact-box {
+    position: relative;
+    width: 100%;
+    height: 58px;
+}
+
+.contact-box-select {
+    margin-bottom: 1.5rem
+}
+
+.contact-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    padding: 1rem;
+    color: var(--white-color);
+    transition: border-color .4s;
+}
+
+.contact-input:focus {
+    border-color: var(--first-color)
+}
+
+.contact-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    transition: top .4s, font-size .4s, color .4s;
+    pointer-events: none;
+    background-color: var(--container-color);
+    padding-inline: .25rem;
+}
+
+.contact-input:focus~.contact-label,
+.contact-input:not(:placeholder-shown)~.contact-label {
+    top: -0.6rem;
+    font-size: var(--smaller-font-size);
+    color: var(--first-color);
+}
+
+.contact-select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer
+}
+
+.contact-select option {
+    background-color: var(--container-color);
+    color: var(--white-color)
+}
+
+.contact-area {
+    height: 150px;
+    margin-bottom: 1.5rem
+}
+
+.contact-area textarea {
+    resize: none
+}
+
+.contact-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+
+/*===== BOTÃO =====*/
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--black-color);
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    font-weight: 600;
+    transition: box-shadow .3s, transform .3s;
+    cursor: pointer;
+}
 
 /* =====RESPONSIVIDADE===== */
 @media (width >=1150px) {
@@ -553,5 +664,10 @@ img {
     .skills-card {
         padding: 2rem 1.75rem;
         min-height: 270px;
+    }
+
+    .contact-campos {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
     }
 }
