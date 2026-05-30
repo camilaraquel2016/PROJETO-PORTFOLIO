@@ -163,9 +163,9 @@ img {
     filter: drop-shadow(0 15px 45px hsla(var(--hue), 80%, 65%, .18));
 }
 
-/* ==== PROJETOS ==== */
-
+/* =====PROJETOS===== */
 .work.section {
+    scroll-margin-top: 5rem;
     overflow: hidden;
 }
 
@@ -185,6 +185,7 @@ img {
     box-sizing: border-box;
 }
 
+
 .work-container::-webkit-scrollbar {
     height: 6px
 }
@@ -200,6 +201,7 @@ img {
     background: var(--first-color);
     border-radius: 10px
 }
+
 
 .work-container::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--hue), 80%, 55%)
@@ -237,12 +239,14 @@ img {
     object-fit: cover;
 }
 
+
 .work-cabecalho {
     display: flex;
     align-items: center;
     column-gap: .75rem;
     margin-bottom: .75rem;
 }
+
 
 .work-numero {
     font-size: 2rem;
@@ -264,8 +268,80 @@ img {
     flex-grow: 1;
 }
 
+/* =====SERVIÇOS===== */
 
 
+
+
+.services-container {
+    row-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+
+
+
+.services-card {
+    background-color: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: border-color .4s;
+}
+
+
+
+
+.services-title-box {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+
+
+
+.services-titulo {
+    font-size: var(--h3-font-size);
+    transition: color .4s;
+}
+
+.services-descricao {
+    margin-block: 1rem
+}
+
+
+
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1rem;
+}
+
+
+
+
+.services-item {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--first-color);
+    color: var(--white-color);
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    transition: border-color .4s, color .4s;
+}
+
+.services-item:hover {
+    border-color: var(--white-color);
+    color: var(--first-color);
+}
 
 /* =====FOOTER===== */
 
