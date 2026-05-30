@@ -270,19 +270,13 @@ img {
 
 /* =====SERVIÇOS===== */
 
-
-
-
 .services-container {
     row-gap: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
     margin-top: 1.5rem;
 }
-
-
-
 
 .services-card {
     background-color: var(--container-color);
@@ -292,17 +286,11 @@ img {
     transition: border-color .4s;
 }
 
-
-
-
 .services-title-box {
     display: flex;
     align-items: center;
     column-gap: 1rem;
 }
-
-
-
 
 .services-titulo {
     font-size: var(--h3-font-size);
@@ -313,18 +301,12 @@ img {
     margin-block: 1rem
 }
 
-
-
-
 .services-list {
     display: flex;
     flex-wrap: wrap;
     gap: .75rem;
     margin-top: 1rem;
 }
-
-
-
 
 .services-item {
     display: inline-flex;
