@@ -11,6 +11,7 @@
     --h2-font-size: 1.25rem;
     --container-color: hsl(var(--hue), 8%, 10%);
     --border-color: hsl(var(--hue), 8%, 20%);
+    --normal-font-size: .938rem;
     --smaller-font-size: .75rem;
     --bigger-font-size: 6.75rem;
     --medium-font-size: 2.5rem;
@@ -162,6 +163,7 @@ img {
     filter: drop-shadow(0 15px 45px hsla(var(--hue), 80%, 65%, .18));
 }
 
+
 /* =====FOOTER===== */
 
 .footer {
@@ -208,9 +210,8 @@ img {
 }
 
 
-
 /* =====RESPONSIVIDADE===== */
-@media (width >=768px) {
+@media (width >=1150px) {
     .container {
         margin-inline: auto
     }
@@ -227,6 +228,7 @@ img {
         text-align: left;
         transform: translateY(0);
     }
+
     .section-title {
         margin-bottom: 3rem;
         font-size: var(--bigger-font-size);
@@ -248,7 +250,7 @@ img {
         font-size: 1.25rem;
         color: #B7B7C7;
     }
-   
+
     .home-imagem {
         justify-content: flex-end;
         transform: translate(50px, 0);
