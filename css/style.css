@@ -705,6 +705,115 @@ details[open].services-card {
     width: 100%;
 }
 
+.table-container {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;      
+    padding-top: 0;   
+    transition: max-height .4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity .3s ease-out,
+                margin-top .4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-card.show-table .table-container {
+    max-height: 500px; 
+    opacity: 1;
+    margin-top: 1.5rem;
+}
+
+.skills-card.show-table .techs-list {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+    pointer-events: none;
+}
+
+.skills-tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.skills-tabela th {
+    text-align: left;
+    padding: .5rem;
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skills-tabela td {
+    padding: .6rem .5rem;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skills-tabela tr:last-child td {
+    border-bottom: none
+}
+
+.skills-tabela td:first-child {
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.nivel-texto {
+    font-weight: 600
+}
+
+.avancado {
+    color: #10b981; 
+}
+
+.intermediario {
+    color: #3b82f6; 
+}
+
+.basico {
+    color: #f97316; 
+}
+
+.skills-card .techs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    max-height: 500px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height .5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity .3s ease-out,
+        margin-bottom .5s ease-out;
+}
+
+
+
+.btn-tabela {
+    background-color: var(--first-color-light);
+    color: var(--first-color);
+    border: 1px solid var(--first-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .65rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color .3s, color .3s, transform .3s, box-shadow .3s;
+}
+
+
+.btn-tabela:hover {
+    background-color: var(--first-color);
+    color: var(--black-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px hsla(var(--hue), 75%, 60%, .35);
+}
+
 /*=====CONTATO=====*/
 .contact-subtitulo {
     text-align: center;
@@ -1050,7 +1159,7 @@ details[open].services-card {
         gap: .75rem;
     }
 
-    .skills-card.techs-item {
+    .skills-card .techs-item {
         font-size: .85rem;
         padding: .5rem .9rem;
     }

@@ -20,3 +20,20 @@ document.querySelectorAll('.nav-link').forEach(link => {
         navMenu.classList.remove('show-menu')
     })
 })
+
+
+/*=============== TABELA DE NÍVEIS (SKILLS) ===============*/
+document.querySelectorAll('.btn-tabela').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.skills-card')
+    card.classList.toggle('show-table')
+
+    const icone = btn.querySelector('i')
+    
+    if (card.classList.contains('show-table')) {
+      icone.className = 'ri-close-line'
+    } else {
+      icone.className = 'ri-table-line'
+    }
+  })
+})
