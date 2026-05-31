@@ -34,7 +34,7 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 body,
@@ -69,22 +69,22 @@ h3 {
 }
 
 ul {
-    list-style: none
+    list-style: none;
 }
 
 a {
     text-decoration: none;
-    color: inherit
+    color: inherit;
 }
 
 img {
     display: block;
     max-width: 100%;
-    height: auto
+    height: auto;
 }
 
 .main {
-    overflow: clip
+    overflow: clip;
 }
 
 .container {
@@ -94,11 +94,17 @@ img {
 
 .grid {
     display: grid;
-    gap: 2rem
+    gap: 2rem;
 }
 
 .section {
-    padding-block: 5rem 2rem
+    padding-block: 5rem 2rem;
+}
+
+.services.section,
+.skills.section,
+.contact.section {
+    scroll-margin-top: 3.5rem;
 }
 
 .section-title {
@@ -109,7 +115,7 @@ img {
 }
 
 .section-title span {
-    color: var(--first-color)
+    color: var(--first-color);
 }
 
 /* ======ESTILOS COMPARTILHADOS===== */
@@ -154,7 +160,7 @@ img {
 
 .techs-item:hover {
     border-color: var(--first-color);
-    color: var(--first-color)
+    color: var(--first-color);
 }
 
 .techs-img {
@@ -273,7 +279,7 @@ img {
 }
 
 .show-menu {
-    right: 0
+    right: 0;
 }
 
 .active-link:not(.nav-contact) {
@@ -290,7 +296,7 @@ img {
 .home {
     min-height: 70vh;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .home-grid {
@@ -301,7 +307,7 @@ img {
 }
 
 .home-texto {
-    text-align: center
+    text-align: center;
 }
 
 .home-saudacao {
@@ -312,7 +318,7 @@ img {
 }
 
 .home-nome,
-.home-bio span{
+.home-bio span {
     color: var(--first-color);
     font-weight: 600;
 }
@@ -364,8 +370,7 @@ img {
 
 /*=====PROJETOS=====*/
 .work.section {
-    scroll-margin-top: 5rem;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .work-container {
@@ -476,6 +481,14 @@ img {
     margin-top: 1.5rem;
 }
 
+.services-subtitulo {
+    text-align: center;
+    color: var(--text-color);
+    max-width: 500px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
 .services-header {
     display: flex;
     justify-content: space-between;
@@ -497,7 +510,7 @@ img {
 }
 
 .services-card:hover {
-        transform: translateY(-2px);
+    transform: translateY(-2px);
 
 }
 
@@ -521,6 +534,7 @@ img {
     font-size: var(--h3-font-size);
     transition: color .4s
 }
+
 
 .services-descricao {
     margin-block: 1rem
@@ -550,6 +564,33 @@ img {
     color: var(--first-color);
 
 }
+
+.services-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .4s ease;
+}
+
+.services-content > div {
+    overflow: hidden;
+}
+
+details[open] .services-content {
+    grid-template-rows: 1fr
+}
+
+details[open] .services-icon {
+    transform: rotate(180deg)
+}
+
+details[open] .services-titulo {
+    color: var(--first-color)
+}
+
+details[open].services-card {
+    border-color: var(--first-color)
+}
+
 
 /*=====SKILLS=====*/
 .skills-container {
@@ -590,6 +631,15 @@ img {
     column-gap: 1rem
 }
 
+.skills-icon-box {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--first-color);
+    background-color: var(--body-color);
+    color: var(--first-color);
+    font-size: 1.5rem;
+}
+
 .skills-titulo {
     font-size: 1.2rem;
     color: var(--white-color);
@@ -603,23 +653,6 @@ img {
     gap: .5rem;
     width: 100%;
 }
-
-details[open] .services-content {
-    grid-template-rows: 1fr
-}
-
-details[open] .services-icon {
-    transform: rotate(180deg)
-}
-
-details[open] .services-titulo {
-    color: var(--first-color)
-}
-
-details[open].services-card {
-    border-color: var(--first-color)
-}
-
 
 /*=====CONTATO=====*/
 .contact-subtitulo {
@@ -788,68 +821,68 @@ details[open].services-card {
 }
 
 @media (width >=768px) {
-        .home-grid {
-            grid-template-columns: repeat(2, 1fr);
-            align-items: center;
-        }
-
-        .home-texto {
-            text-align: left;
-            transform: translateY(0);
-        }
-
-        .home-imagem {
-            height: auto;
-            transform: translateY(0);
-        }
-
-        .home-img {
-            width: 280px
-        }
-
-        .home-bio {
-            margin-inline: 0;
-            font-size: 1rem;
-            color: #B7B7C7;
-        }
-
-        .home-cargo {
-            font-size: 3.4rem;
-            letter-spacing: -1.5px;
-        }
-
-        .work-container {
-            padding-inline: 1.5rem;
-            padding-right: 2rem;
-        }
-
-        .work-card {
-            flex: 0 0 calc(50% - 0.75rem);
-            min-width: auto;
-            max-width: none;
-        }
-
-        .contact-container {
-            grid-template-columns: .8fr 1fr;
-            align-items: stretch;
-            column-gap: 3rem;
-        }
-
-        .contact-campos {
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: 1.5rem;
-        }
-
-        .skills-content {
-            grid-template-columns: repeat(2, 1fr);
-            align-items: start;
-        }
-
-        .skills-card {
-            padding: 2rem 1.75rem;
-            min-height: 270px;
-        }
+    .home-grid {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
+
+    .home-texto {
+        text-align: left;
+        transform: translateY(0);
+    }
+
+    .home-imagem {
+        height: auto;
+        transform: translateY(0);
+    }
+
+    .home-img {
+        width: 280px
+    }
+
+    .home-bio {
+        margin-inline: 0;
+        font-size: 1rem;
+        color: #B7B7C7;
+    }
+
+    .home-cargo {
+        font-size: 3.4rem;
+        letter-spacing: -1.5px;
+    }
+
+    .work-container {
+        padding-inline: 1.5rem;
+        padding-right: 2rem;
+    }
+
+    .work-card {
+        flex: 0 0 calc(50% - 0.75rem);
+        min-width: auto;
+        max-width: none;
+    }
+
+    .contact-container {
+        grid-template-columns: .8fr 1fr;
+        align-items: stretch;
+        column-gap: 3rem;
+    }
+
+    .contact-campos {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+    }
+
+    .skills-card {
+        padding: 2rem 1.75rem;
+        min-height: 270px;
+    }
+}
 
 
 @media (width >=1150px) {
@@ -935,10 +968,12 @@ details[open].services-card {
     .skills-content {
         grid-template-columns: repeat(3, 1fr);
         max-width: 100%;
+
     }
 
     .skills-card {
-        padding: 2rem 1.75rem
+        padding: 2rem 1.75rem;
+
     }
 
     .footer-base {
