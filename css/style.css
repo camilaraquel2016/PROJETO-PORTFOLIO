@@ -112,6 +112,22 @@ img {
     color: var(--first-color)
 }
 
+/* ======ESTILOS COMPARTILHADOS===== */
+
+.work-card,
+.skills-card,
+.contact-card {
+    background-color: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: transform .4s, border-color .4s;
+}
+
+.work-card:hover,
+.skills-card:hover {
+    border-color: var(--first-color);
+}
 /*=====HEADER=====*/
 .button,
 .nav-contact {
@@ -348,17 +364,18 @@ img {
 }
 
 .work-card {
-    flex: 0 0 85%;
-    min-width: 280px;
+    flex: 0 0 75%;
+    min-width: 240px;
     max-width: 380px;
+    padding: 1.25rem;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    background-color: var(--container-color);
-    border: 1px solid var(--border-color);
-    border-radius: 1.5rem;
-    padding: 1.5rem;
-    transition: transform .4s, border-color .4s;
+}
+
+
+.work-card:hover {
+    transform: translateY(-10px);
 }
 
 .work-box {
@@ -372,7 +389,12 @@ img {
 .work-img {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.work-card:hover .work-img {
+    transform: scale(1.05);
 }
 
 .work-cabecalho {
@@ -398,6 +420,12 @@ img {
 .work-descricao {
     margin-bottom: 1.25rem;
     flex-grow: 1
+}
+
+.work-techs .techs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
 }
 
 /*=====SERVIÇOS=====*/
@@ -490,11 +518,6 @@ img {
 .skills-card {
     display: flex;
     flex-direction: column;
-    background-color: var(--container-color);
-    border: 1px solid var(--border-color);
-    border-radius: 1.5rem;
-    padding: 1.5rem;
-    transition: transform .4s, border-color .4s;
     width: 100%;
     box-sizing: border-box;
 }
@@ -547,8 +570,13 @@ img {
 }
 
 .techs-img {
-    width: 16px;
-    height: 16px
+    width: 18px;
+    height: 18px;
+    transition: transform .4s;
+}
+
+.techs-item:hover .techs-img {
+    transform: translateY(-2px);
 }
 
 /*=====CONTATO=====*/
