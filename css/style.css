@@ -827,7 +827,7 @@ img {
     }
 
     .work-card {
-        flex: 0 0 calc(33.333% - 1rem);
+        flex: 0 0 calc(33.333% - 0.3rem);
         min-width: 300px;
         max-width: none;
     }
