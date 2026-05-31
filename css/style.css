@@ -447,6 +447,7 @@ img {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
     scrollbar-color: var(--first-color) var(--container-color);
     display: flex;
     gap: 1.5rem;
@@ -482,6 +483,9 @@ img {
     flex-direction: column;
 }
 
+.work-card:last-child {
+    margin-right: 2rem;
+}
 
 .work-card:hover {
     transform: translateY(-10px);
@@ -836,6 +840,15 @@ details[open].services-card {
     color: var(--text-color);
     margin-top: .75rem;
     margin-bottom: 2.5rem;
+    padding: 0.1rem;
+
+}
+
+.skills-subtitulo {
+    text-align: center;
+    margin-inline: auto;
+    max-width: 600px;
+    margin-bottom: 1rem;
 }
 
 .contact-container {
@@ -1097,7 +1110,7 @@ details[open].services-card {
     }
 }
 
-@media (width >=600px) {
+@media (width >=768px) {
     .home-grid {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
