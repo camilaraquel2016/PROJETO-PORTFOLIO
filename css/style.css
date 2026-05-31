@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Syne:wght@400..800&display=swap");
+
+
 /*=====VARIÁVEIS=====*/
 :root {
     --hue: 255;
@@ -34,10 +37,27 @@
     margin: 0
 }
 
+body,
+input,
+button,
+textarea,
+label {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--normal-font-size);
+}
+
 body {
     background-color: var(--body-color);
     color: var(--text-color);
     overflow-x: clip;
+}
+
+input,
+button,
+textarea {
+    border: none;
+    outline: none;
+    background: none;
 }
 
 h1,
@@ -384,10 +404,11 @@ img {
 .services-container {
     row-gap: 1.5rem;
     display: grid;
-     grid-template-columns: minmax(auto, 600px);
+    grid-template-columns: minmax(auto, 600px);
     justify-content: center;
     margin-top: 1.5rem;
 }
+
 .services-header {
     display: flex;
     justify-content: space-between;
