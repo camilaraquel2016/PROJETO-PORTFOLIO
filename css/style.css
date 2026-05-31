@@ -661,6 +661,7 @@ details[open].services-card {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     align-items: start;
+    margin-inline: auto;
 }
 
 .skills-card {
@@ -1254,8 +1255,6 @@ details[open].services-card {
         max-width: 100%;
 
     }
-
-
     .skills-card {
         padding: 2rem 1.75rem;
         min-height: 320px;
@@ -1270,7 +1269,7 @@ details[open].services-card {
         padding: .5rem .9rem;
     }
 
-    .skills-card.techs-img {
+    .skills-card .techs-img {
         width: 22px;
         height: 22px;
     }
