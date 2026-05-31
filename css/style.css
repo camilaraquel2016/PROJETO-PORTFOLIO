@@ -324,6 +324,14 @@ img {
     font-weight: 600;
 }
 
+.home-divisor {
+    width: 50px;
+    height: 3px;
+    background: var(--first-color);
+    margin: 1rem auto 2rem;
+    border-radius: 20px;
+}
+
 .home-cargo {
     font-family: inherit;
     font-size: 2.4rem;
@@ -355,11 +363,53 @@ img {
     align-items: center;
 }
 
+
+.home-brilho {
+    background-color: var(--first-color);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    width: 280px;
+    height: 280px;
+    opacity: .38;
+    filter: blur(70px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .home-img-box {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.moldura-retangulo {
+    position: absolute;
+    width: 86%;
+    height: 96%;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(18px);
+    border-radius: 30px;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+}
+
+.moldura-circulo {
+    position: absolute;
+    width: 108%;
+    aspect-ratio: 1;
+    border: 1px solid hsla(var(--hue), 80%, 65%, .35);
+    border-radius: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .home-img {
@@ -376,8 +426,7 @@ img {
 
 .work-container {
     padding-block: 2rem 4rem;
-    padding-inline: 1.5rem;
-    padding-right: 3rem;
+    padding-inline: 0.90rem;
     margin-top: 1.5rem;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -409,9 +458,9 @@ img {
 }
 
 .work-card {
-    flex: 0 0 75%;
-    min-width: 240px;
-    max-width: 380px;
+    flex: 0 0 95%;
+    min-width: 0;
+    max-width: none;
     padding: 1.25rem;
     scroll-snap-align: start;
     display: flex;
@@ -842,6 +891,17 @@ details[open].services-card {
         width: 280px
     }
 
+    .home-brilho {
+        width: 420px;
+        height: 420px;
+        filter: blur(85px);
+        opacity: .36;
+    }
+
+    .home-divisor {
+        margin: 1rem 0 2rem
+    }
+
     .home-bio {
         margin-inline: 0;
         font-size: 1rem;
@@ -956,6 +1016,13 @@ details[open].services-card {
         width: 340px
     }
 
+    .home-brilho {
+        width: 520px;
+        height: 520px;
+        opacity: .38;
+        filter: blur(95px);
+    }
+
     .home-cargo {
         font-size: 5rem;
         letter-spacing: -2px
@@ -988,7 +1055,7 @@ details[open].services-card {
         padding: .5rem .9rem;
     }
 
-    .techs-img {
+    .skills-card.techs-img {
         width: 22px;
         height: 22px;
     }
