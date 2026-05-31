@@ -776,7 +776,7 @@ details[open].services-card {
     color: var(--text-color)
 }
 
-/*=====RESPONSIVIDADE=====*/
+/*=====RESPONSIVIDADE- BREAKPOINTS=====*/
 @media (width >=540px) {
     .skills-content {
         grid-template-columns: repeat(2, 1fr);
@@ -788,7 +788,6 @@ details[open].services-card {
 }
 
 @media (width >=768px) {
-    @media (width >=768px) {
         .home-grid {
             grid-template-columns: repeat(2, 1fr);
             align-items: center;
@@ -852,7 +851,6 @@ details[open].services-card {
         }
     }
 
-}
 
 @media (width >=1150px) {
     .container {
