@@ -19,7 +19,7 @@ O design é escuro com destaque em roxo, focado em uma experiência visual moder
 - Home com apresentação e foto
 - Projetos com scroll horizontal e tags de tecnologias
 - Serviços (abre/fecha ao clicar com `<details>` nativo)
-- Skills divididas em Frontend, Backend e Design com tabela de níveisg
+- Skills divididas em Frontend, Backend e Design com tabela de níveis
 - Contato com formulário e informações de contato
 - Footer com redes sociais 
 
