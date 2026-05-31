@@ -22,7 +22,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 })
 
 
-/*=============== TABELA DE NÍVEIS (SKILLS) ===============*/
+/*===== TABELA DE NÍVEIS (SKILLS) ======*/
 document.querySelectorAll('.btn-tabela').forEach(btn => {
   btn.addEventListener('click', () => {
     const card = btn.closest('.skills-card')
@@ -36,4 +36,19 @@ document.querySelectorAll('.btn-tabela').forEach(btn => {
       icone.className = 'ri-table-line'
     }
   })
+})
+
+/*===== ANIMAÇÃO DE ENTRADA (SCROLL) =====*/
+const observador = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visivel')
+      observador.unobserve(entry.target)
+    }
+  })
+}, { threshold: 0.1 })
+
+document.querySelectorAll('.work-card, .skills-card, .services-card, .habilidade-grupo').forEach(el => {
+  el.classList.add('invisivel')
+  observador.observe(el)
 })

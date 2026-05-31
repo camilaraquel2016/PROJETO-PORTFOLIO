@@ -1304,3 +1304,15 @@ details[open].services-card {
     background: var(--first-color);
     border-radius: 10px
 }
+
+/*===== ANIMAÇÕES DE ENTRADA =====*/
+.invisivel {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
