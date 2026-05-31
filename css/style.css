@@ -1078,16 +1078,12 @@ details[open].services-card {
 
 /*=====RESPONSIVIDADE- BREAKPOINTS=====*/
 @media (width >=540px) {
-    .skills-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .nav-menu {
         width: 50%
     }
 }
 
-@media (width >=768px) {
+@media (width >=600px) {
     .home-grid {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
