@@ -273,8 +273,7 @@ img {
 }
 
 .home-nome,
-.home-bio span,
-#home-profissao {
+.home-bio span{
     color: var(--first-color);
     font-weight: 600;
 }
@@ -290,6 +289,7 @@ img {
 }
 
 #home-profissao {
+    color: var(--first-color);
     white-space: nowrap;
     display: inline-block;
     transition: color .3s;
