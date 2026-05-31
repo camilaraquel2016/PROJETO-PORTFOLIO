@@ -384,9 +384,20 @@ img {
 .services-container {
     row-gap: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr;
+     grid-template-columns: minmax(auto, 600px);
     justify-content: center;
     margin-top: 1.5rem;
+}
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.services-header::-webkit-details-marker {
+    display: none
 }
 
 .services-card {
