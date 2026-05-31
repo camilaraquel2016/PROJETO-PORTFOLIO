@@ -658,11 +658,26 @@ details[open].services-card {
 
 .table-container {
     overflow: hidden;
-    max-height: max-content;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;      
+    padding-top: 0;   
+    transition: max-height .4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity .3s ease-out,
+                margin-top .4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-card.show-table .table-container {
+    max-height: 500px; 
     opacity: 1;
     margin-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
+}
+
+.skills-card.show-table .techs-list {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+    pointer-events: none;
 }
 
 .skills-tabela {
@@ -701,15 +716,15 @@ details[open].services-card {
 }
 
 .avancado {
-    color: #10b981
+    color: #10b981; 
 }
 
 .intermediario {
-    color: var(--first-color)
+    color: #3b82f6; 
 }
 
 .basico {
-    color: #f97316
+    color: #f97316; 
 }
 
 .skills-card .techs-list {
@@ -725,6 +740,30 @@ details[open].services-card {
 }
 
 
+
+.btn-tabela {
+    background-color: var(--first-color-light);
+    color: var(--first-color);
+    border: 1px solid var(--first-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .65rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color .3s, color .3s, transform .3s, box-shadow .3s;
+}
+
+
+.btn-tabela:hover {
+    background-color: var(--first-color);
+    color: var(--black-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px hsla(var(--hue), 75%, 60%, .35);
+}
 
 /*=====CONTATO=====*/
 .contact-subtitulo {
