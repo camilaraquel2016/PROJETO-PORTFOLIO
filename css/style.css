@@ -646,7 +646,6 @@ details[open].services-card {
 .skills-container {
     row-gap: 1.5rem;
     margin-top: 1.5rem;
-    width: 100%;
 }
 
 .skills-subtitulo {
@@ -655,6 +654,7 @@ details[open].services-card {
     margin-inline: auto;
     margin-bottom: 1rem;
 }
+
 
 .skills-content {
     grid-template-columns: 1fr;
@@ -709,15 +709,15 @@ details[open].services-card {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    margin-top: 0;      
-    padding-top: 0;   
+    margin-top: 0;
+    padding-top: 0;
     transition: max-height .4s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity .3s ease-out,
-                margin-top .4s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity .3s ease-out,
+        margin-top .4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skills-card.show-table .table-container {
-    max-height: 500px; 
+    max-height: 500px;
     opacity: 1;
     margin-top: 1.5rem;
 }
@@ -765,15 +765,15 @@ details[open].services-card {
 }
 
 .avancado {
-    color: #10b981; 
+    color: #10b981;
 }
 
 .intermediario {
-    color: #3b82f6; 
+    color: #3b82f6;
 }
 
 .basico {
-    color: #f97316; 
+    color: #f97316;
 }
 
 .skills-card .techs-list {
