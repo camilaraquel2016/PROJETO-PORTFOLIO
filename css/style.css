@@ -894,6 +894,16 @@ details[open].services-card {
     border-color: var(--first-color)
 }
 
+.contact-input:-webkit-autofill,
+.contact-input:-webkit-autofill:hover,
+.contact-input:-webkit-autofill:focus,
+.contact-input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--container-color) inset;
+    -webkit-text-fill-color: var(--white-color);
+    caret-color: var(--white-color);
+    transition: background-color 9999s ease-in-out 0s;
+}
+
 .contact-label {
     position: absolute;
     top: 1rem;

@@ -52,3 +52,12 @@ document.querySelectorAll('.work-card, .skills-card, .services-card, .habilidade
   el.classList.add('invisivel')
   observador.observe(el)
 })
+
+
+/*=====NAO RECARREGAR A PAGINA =====*/
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  form.reset();
+});
