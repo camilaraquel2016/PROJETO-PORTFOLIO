@@ -42,7 +42,6 @@ O design é escuro com destaque em roxo, focado em uma experiência visual moder
 ## 🌐 Link do GitHub Pages
 👉 [Acesse o Portfólio Aqui](https://camilaraquel2016.github.io/PROJETO-PORTFOLIO/)
 ---
-
 ## 🎥 Apresentação do Projeto
 
-👉 [Assista à apresentação do projeto](https://drive.google.com/file/d/1cxivaiNd0ZmItRisjx17F9-KXfPPWg0j/view?usp=drive_link)
+## 👉 [Assista à apresentação do projeto](https://drive.google.com/file/d/1cxivaiNd0ZmItRisjx17F9-KXfPPWg0j/view?usp=drive_link)
